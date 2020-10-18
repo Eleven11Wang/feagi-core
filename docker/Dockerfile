@@ -37,4 +37,4 @@ WORKDIR /opt/source-code/feagi-core/
 
 RUN ls /opt/source-code/
 
-CMD ["python3", "main-auto.py"]
+CMD ["python3", "main.py"]
