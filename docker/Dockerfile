@@ -16,7 +16,7 @@ RUN apt-get install wget
 # FEAGI
 #######
 RUN mkdir -p /opt/source-code/feagi-core/
-RUN git clone https://github.com/m-nadji-tehrani/feagi-core.git /opt/source-code/feagi-core
+RUN git clone https://github.com/Eleven11Wang/feagi-core.git /opt/source-code/feagi-core
 WORKDIR /opt/source-code/feagi-core/
 RUN git checkout dev
 
@@ -30,8 +30,8 @@ RUN wget http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz -P /opt/sour
 
 RUN pip3 install --upgrade pip
 RUN pip3 install -r /opt/source-code/feagi-core/requirements.txt
-WORKDIR /opt/source-code/feagi-core/cython_libs
-RUN python3 ./cython_setup.py build_ext --inplace
+WORKDIR /opt/source-code/feagi-core
+RUN python3 ./feagi/cython_libs/st/cython_setup.py build_ext --inplace
 RUN mkdir /opt/source-code/feagi-core/connectome
 WORKDIR /opt/source-code/feagi-core/
 
