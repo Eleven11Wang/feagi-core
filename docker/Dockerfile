@@ -18,7 +18,7 @@ RUN apt-get install wget
 RUN mkdir -p /opt/source-code/feagi-core/
 RUN git clone https://github.com/Eleven11Wang/feagi-core.git /opt/source-code/feagi-core
 WORKDIR /opt/source-code/feagi-core/
-RUN git checkout dev
+#RUN git checkout dev
 
 # MNIST
 #######
